@@ -1,14 +1,19 @@
-import React, { useState , useEffect , useCallback } from 'react';
+// import React, { useState , useEffect , useCallback } from 'react';
+import React, { useReducer , useEffect , useCallback } from 'react';
 
 import IngredientForm from './IngredientForm';
 import IngredientList from './IngredientList';
 import ErrorModal from '../UI/ErrorModal';
 import Search from './Search';
 
+const ingredientReducer = (currentIngredients, action) => {
+  
+}
+
 const Ingredients = () => {
-  const [userIngredients, setUserIngredients] = useState([]);
-  const [isLoading, setisLoading] = useState(false);
-  const [error, setError] = useState();
+  // const [userIngredients, setUserIngredients] = useState([]);
+  // const [isLoading, setisLoading] = useState(false);
+  // const [error, setError] = useState();
 
   useEffect(() => {
     fetch('https://react-hooks-9b70d-default-rtdb.firebaseio.com/ingredients.json')
